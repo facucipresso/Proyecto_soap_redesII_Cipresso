@@ -398,40 +398,45 @@ typedef char *_QName;
 
 /******************************************************************************\
  *                                                                            *
- * Server-Side Operations                                                     *
+ * Client-Side Call Stub Functions                                            *
  *                                                                            *
 \******************************************************************************/
 
-    /** Web service operation 'ns2__add' implementation, should return SOAP_OK or error code */
-    SOAP_FMAC5 int SOAP_FMAC6 ns2__add(struct soap*, double a, double b, double *result);
-    /** Web service operation 'ns2__sub' implementation, should return SOAP_OK or error code */
-    SOAP_FMAC5 int SOAP_FMAC6 ns2__sub(struct soap*, double a, double b, double *result);
-    /** Web service operation 'ns2__mul' implementation, should return SOAP_OK or error code */
-    SOAP_FMAC5 int SOAP_FMAC6 ns2__mul(struct soap*, double a, double b, double *result);
-    /** Web service operation 'ns2__div' implementation, should return SOAP_OK or error code */
-    SOAP_FMAC5 int SOAP_FMAC6 ns2__div(struct soap*, double a, double b, double *result);
-    /** Web service operation 'ns2__pow' implementation, should return SOAP_OK or error code */
-    SOAP_FMAC5 int SOAP_FMAC6 ns2__pow(struct soap*, double a, double b, double *result);
-
-/******************************************************************************\
- *                                                                            *
- * Server-Side Skeletons to Invoke Service Operations                         *
- *                                                                            *
-\******************************************************************************/
-
-SOAP_FMAC5 int SOAP_FMAC6 soap_serve(struct soap*);
-
-SOAP_FMAC5 int SOAP_FMAC6 soap_serve_request(struct soap*);
-
-SOAP_FMAC5 int SOAP_FMAC6 soap_serve_ns2__add(struct soap*);
-
-SOAP_FMAC5 int SOAP_FMAC6 soap_serve_ns2__sub(struct soap*);
-
-SOAP_FMAC5 int SOAP_FMAC6 soap_serve_ns2__mul(struct soap*);
-
-SOAP_FMAC5 int SOAP_FMAC6 soap_serve_ns2__div(struct soap*);
-
-SOAP_FMAC5 int SOAP_FMAC6 soap_serve_ns2__pow(struct soap*);
+    
+    /** Web service synchronous operation 'soap_call_ns2__add' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call_ns2__add(struct soap *soap, const char *soap_endpoint, const char *soap_action, double a, double b, double *result);
+    /** Web service asynchronous operation 'soap_send_ns2__add' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send_ns2__add(struct soap *soap, const char *soap_endpoint, const char *soap_action, double a, double b);
+    /** Web service asynchronous operation 'soap_recv_ns2__add' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv_ns2__add(struct soap *soap, double *result);
+    
+    /** Web service synchronous operation 'soap_call_ns2__sub' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call_ns2__sub(struct soap *soap, const char *soap_endpoint, const char *soap_action, double a, double b, double *result);
+    /** Web service asynchronous operation 'soap_send_ns2__sub' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send_ns2__sub(struct soap *soap, const char *soap_endpoint, const char *soap_action, double a, double b);
+    /** Web service asynchronous operation 'soap_recv_ns2__sub' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv_ns2__sub(struct soap *soap, double *result);
+    
+    /** Web service synchronous operation 'soap_call_ns2__mul' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call_ns2__mul(struct soap *soap, const char *soap_endpoint, const char *soap_action, double a, double b, double *result);
+    /** Web service asynchronous operation 'soap_send_ns2__mul' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send_ns2__mul(struct soap *soap, const char *soap_endpoint, const char *soap_action, double a, double b);
+    /** Web service asynchronous operation 'soap_recv_ns2__mul' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv_ns2__mul(struct soap *soap, double *result);
+    
+    /** Web service synchronous operation 'soap_call_ns2__div' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call_ns2__div(struct soap *soap, const char *soap_endpoint, const char *soap_action, double a, double b, double *result);
+    /** Web service asynchronous operation 'soap_send_ns2__div' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send_ns2__div(struct soap *soap, const char *soap_endpoint, const char *soap_action, double a, double b);
+    /** Web service asynchronous operation 'soap_recv_ns2__div' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv_ns2__div(struct soap *soap, double *result);
+    
+    /** Web service synchronous operation 'soap_call_ns2__pow' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call_ns2__pow(struct soap *soap, const char *soap_endpoint, const char *soap_action, double a, double b, double *result);
+    /** Web service asynchronous operation 'soap_send_ns2__pow' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send_ns2__pow(struct soap *soap, const char *soap_endpoint, const char *soap_action, double a, double b);
+    /** Web service asynchronous operation 'soap_recv_ns2__pow' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv_ns2__pow(struct soap *soap, double *result);
 
 #endif
 

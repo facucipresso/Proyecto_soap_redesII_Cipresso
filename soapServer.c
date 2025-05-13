@@ -16,6 +16,9 @@ A commercial use license is available from Genivia Inc., contact@genivia.com
 #pragma option push -w-8004
 #endif
 #include "soapH.h"
+#include "calcs.h"
+#include "soapServer.h"
+
 
 SOAP_SOURCE_STAMP("@(#) soapServer.c ver 2.8.138 2025-05-06 18:28:23 GMT")
 SOAP_FMAC5 int SOAP_FMAC6 soap_serve(struct soap *soap)
